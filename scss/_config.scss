@@ -6,3 +6,14 @@ $medium-color: #ccc;
 $dark-color: #333;
 // putem seta si bg ca si variabila
 $bg-image: url('../img/showcase.jpg');
+
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } 
+  @else {
+    @return #fff;
+  }
+}
