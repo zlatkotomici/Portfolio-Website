@@ -86,10 +86,17 @@ input[class^='btn-']:hover {
     line-height: 1.2; }
 
 #logo {
-  width: 70px;
-  height: 70px;
-  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffbc00;
   text-transform: uppercase; }
+  #logo:hover {
+    background: #ffbc00;
+    color: #333;
+    border: 2px #333 solid;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1rem; }
 
 #main-nav {
   display: flex;
