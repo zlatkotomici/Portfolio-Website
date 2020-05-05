@@ -14,6 +14,7 @@
   background: $main-color;
   overflow: hidden;
 
+  // creating the overlay here
   &::after {
     content: '';
     position: absolute;
@@ -28,7 +29,8 @@
     transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
   }
 
-  // Bring in main color overlay
+  // Bring in main color to overlay
+  // am pus 0 sa le aducem inauntru
   &:hover:after {
     transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
   }
@@ -45,6 +47,7 @@
   }
 
   &-image {
+    // this will be the item-image class, the container
     height: auto;
     transform: translateZ(0);
     display: block;
@@ -59,6 +62,7 @@
   }
 
   &-image img {
+    // this is the actually img
     position: absolute;
     top: 0;
     left: 0;
