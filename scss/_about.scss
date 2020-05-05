@@ -1,0 +1,126 @@
+// Header
+#header {
+  // Header Home
+  // &-home {
+  //   ...
+  // }
+
+  // Header Inner
+  &-inner {
+    // Aici am format un alt header mai mic decat cel precedent, l-am taiat,
+    // i-am dat o inaltime mai mica si o bordura jos.
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+
+// Logo...
+
+// Main Nav...
+
+// About Sections
+#about {
+  // About A
+  // Aici am format o pag intro, cu o img in stanga si ceva scris in dreapta 'div',
+  // iar dedesubt 3 div cu 3 icons de culoare galbena si ceva titluri la fiecare in parte
+  // puse in coloane pe un singur rand
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        'bioimage bio bio'
+        'aw1 aw2 aw3';
+      grid-gap: 1.2rem;
+    }
+
+    // Grid Area
+    .bio-image {
+      grid-area: bioimage;
+    }
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+    }
+    .award-1 {
+      grid-area: aw1;
+    }
+    .award-2 {
+      grid-area: aw2;
+    }
+    .award-3 {
+      grid-area: aw3;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
+    }
+  }
+
+  // About B
+  &-b {
+    // Aici am creat 6 bare orizontale de culoare gray, de height 20 px, rotunjite un pic
+    // cu un div suprapus, embed, ca si o acoperire de culoare galbena, de width diferite 
+    // setate in html
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      div {
+        // 100% din cei 20px de mai sus
+        height: 100%;
+        background: $main-color;
+      }
+    }
+  }
+  // About C
+  &-c {
+    // Aici am format un rand cu 4 coloane, cu 4 logo diferite si cu o latime mai mica,
+    // sa se incadreze in pagina
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+  // About D
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

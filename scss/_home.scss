@@ -1,4 +1,8 @@
 // HEADER
+// in html avem <header id="header-home"> iar aici in scss am pus:
+// doar #header si mai jos &-home; &-tine locul lui #header, Parintelui.
+// in &-home am facut nesting, putem add .header-content si h1.
+// Obs: nu putem pune & in loc de .header, ptr ca el tine doar locul lui id #header.
 #header {
   // Header Home
   &-home {
@@ -18,6 +22,7 @@
 }
 
 // Logo
+// asa putem modifica marimea unei img, logo, icon...
 #logo {
   width: 70px;
   height: 70px;
@@ -42,7 +47,7 @@
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
-    // asa va aparea bordura colorata in 0.5s cand facem hover pe link
+    // asa va aparea bordura colorata in 0.5s cand facem hover pe link, in event
     // deci pot fi si alte prop. nu numai bg-color
     transition: border-color 0.5s;
     &:hover {
@@ -58,6 +63,9 @@
 // Home Sections
 #home {
   // Home Section A
+  //  <section id="home-a" class="text-center py-2">
+  // la fel am pus #home dar noi aveam in html 'home-a';
+  // &- tine locul lui id #home.
   &-a {
     .specials {
       margin-top: 3rem;
@@ -90,7 +98,7 @@
           font-weight: bold;
         }
       }
-
+      // ptr ca avem 4 div-uri
       div {
         padding: 3rem 0;
         &:nth-child(odd) {
@@ -112,6 +120,7 @@
       text-align: center;
 
       // process-icon
+      // icons- sunt bulinele mari
       &-icon {
         border-radius: 50%;
         background: $dark-color;
@@ -123,7 +132,7 @@
         text-align: center;
         position: relative;
         transition: all 1s;
-
+        // datorita lui transition, cand facem hover pe buline se vor modifica props.
         &:hover {
           background: $main-color;
           width: 90px;
@@ -138,6 +147,7 @@
       }
 
       // process-step
+      // steps- sunt bulinele mici
       &-step {
         position: absolute;
         top: 0;
@@ -169,6 +179,7 @@
     height: 5rem;
     align-items: center;
 
+    // asa am facut social-media mici, rotunde si cu hover efect.
     .social .fab {
       margin-right: 1rem;
       border: 2px #fff solid;
